@@ -1,0 +1,109 @@
+1- Verificação da idade: dado um número, indique se o cidadão é maior de idade
+input (x)
+if x >= 18: 
+"Maior de idade"
+else: 
+"Menor de idade" 
+
+2- Dado dois números, retorne qual deles é maior ou se ambos são iguais 
+input (x)
+input (y)
+if x > y:
+"x"
+if x < y:
+"y"
+else: 
+"x=y"
+
+3-	Dado uma nota, indique qual o conceito do aluno 
+input (x)
+if x >= 9: 
+"a"
+if x >= 8:
+"b"
+if x>= 5:
+"c"
+else:
+"d"
+
+4-	Dada uma lista de números, calcule a soma dos números pares
+lista [] 
+For x in lista do:
+if x % 2 = 0: 
+soma += x
+
+5- índice de shannon 
+
+Algoritmo: calculo do índice de Shannon 
+Input: uma lista de valores inteiros positivos 
+Output: um valor positivo 
+
+M = 0 ; new_list [] ; H = 0
+For X in list do: 
+M += x
+For X in list do: 
+new_list << x / m
+For x in new_list do: 
+X <- x *ln x
+For x in new_list do: 
+H += x 
+end
+return -1*H
+
+6- Curva do coletor
+
+Algoritmo: curva do coletor 
+Input: lista de abundancia de sps, numero de subamostras, pseudorréplicas 
+Output: lista com numero de reads e numero de espécies médio observado 
+
+
+Total = 0 ; L = [ ] 
+For x in list_ab: 
+Total += 0
+Tamanho <- (total / n subamostras) 
+For each réplica:
+L = [ ]; 
+a = choose (tamanho; lista)
+L << a 
+For sp in L:
+soma += sp
+For each sp:
+sp % soma
+
+7- Turnover
+
+Algoritmo: turnover 
+Input: amostra 1 e amostra 2
+Output: valor decimal positivo representativo do turnover
+
+a []; b = [ ]; ab = []
+For sp in amostra 1 do: 
+If sp in amostra 2: 
+ab << sp
+else: 
+a << sp 
+For sp in amostra 2 do: 
+If sp in amostra 1:
+ab << sp
+else: 
+b << sp
+A = 0 ; B = 0 ; AB = 0 
+A = len(a)
+B = len (b)
+AB  = len (ab)
+T = A + B + AB
+End
+Return 1-AB/T
+
+8- Rarefação
+
+Algoritmo: rarefação
+Input: amostras de diferentes tamanhos 
+Output: amostras de tamanhos iguais 
+
+1º Achar o numero da menor amostra - somando as linhas (reads) para ter o total por colunas (amostras)
+2º Calcular a proporção de cada espécie em cada amostra (coluna)
+3º Fazer subamostras do mesmo tamanho da menor amostra naquelas que eram maiores, considerando a proporção encontrada no passo anterior 
+
+
+
