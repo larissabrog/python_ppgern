@@ -1,0 +1,37 @@
+Algoritmo tarefa: 
+1 - Dada uma lista de números, calcule a soma dos números pares
+Input: Lista de números
+Output: Soma dos pares 
+1º inserir a lista de números
+2º identificar os pares 
+3º somar somente os números pares
+4º retornar a soma dos pares 
+
+Lista []
+For x in list: 
+	If x % 2 = 0:
+	Soma += x
+Return soma
+
+2- Algoritmo problema pessoal: Fechar as janelas antes de chover
+Input: dados da previsão do tempo
+Output: fechar a janela
+1º Inserir dados da previsão do tempo diária; 
+2º No horário em que a umidade estiver >60 % 
+3º retorna: fechar a janela
+
+3- Escolhido dos exercícios: 
+Algoritmo: Calculadora de fatoriais 
+Input: um número positivo inteiro, maior que zero
+Output: o fatorial desse número 
+1º Inserir um número inteiro positivo maior que zero;
+2º criar uma lista decrescente de x até 1;
+2º multiplicar x por todos os números menores do que ele (em loop até 1);
+3º retorna o fatorial.  
+
+Input (x)
+x > 0
+List = [x, 1]
+For x in list do: 
+	fatorial = x * (x – 1)  
+return fatorial
