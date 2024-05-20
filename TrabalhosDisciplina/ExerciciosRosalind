@@ -1,0 +1,208 @@
+# Desafio 2:
+# Problem Given: Two positive integers a and b, each less than 1000.
+# Return: The integer corresponding to the square of the hypotenuse of the right triangle whose legs have lengths a and b.
+
+# Criando uma função para o cálculo da hipotenusa
+def hipotenusa(a, b):
+    h = (a**2 + b**2)
+    return h
+
+# Testando com o input da Rosalind 
+a = 852
+b = 915
+print(h)
+1563129
+
+# Desafio 3:	
+# Problem Given: A string s of length at most 200 letters and four integers a, b, c and d.
+# Return: The slice of this string from indices a through b and c through d (with space in between), inclusively. In other words, we should include elements s[b] and s[d] in our slice.
+
+# Criando uma função para a string (s) e os índices do slicing (a, b, c e d)
+def f_string (s, a, b, c, d):
+
+# Fazendo o slicing pelos índices
+    slice1 = s[a:b+1]
+    slice2 = s[c:d+1]
+
+# Utilizando f-string para juntar as slices no resultado
+    final_string = f’{slice1} {slice2}’
+    return final_string
+
+# Testando com o input da Rosalind
+s = 'uyBVwrEntRocwJAythyaOTTZ968ZUehkN0oDydqZ4W8XLx4UgjtPT5j1WjPA6X4FcxXheXAgfXPp5pSeRIsNRdYXpCRGJ9plQNCl6UzahiCx7bu7vfIwuLQBfJ68zHZjfuLGGjkezNXgYYniN8K6m24X99V0OsUAUrKGyqgallinago6V4Gkwsxbtg'
+a = 14
+b = 19
+c = 166
+d = 174
+print(f_string(s, a, b, c, d))
+Aythya gallinago
+
+# Desafio 4: 
+# Given: Two positive integers a and b (a<b<10000).
+# Return: The sum of all odd integers from a through b, inclusively.
+
+# Criando uma função para a soma 
+def soma(a, b):
+# Criando uma variável para a soma dos ímpares
+    soma_imp = 0
+# Fazendo o loop de a até b, com a condicional de ser ímpar e retornando a soma 
+    for x in range(a, b + 1):
+        if x % 2 != 0:  
+            soma_imp += num
+    return soma
+
+# Testando com o input da Rosalind
+a = 4953
+b = 9237
+print(def soma(a, b))
+15204585
+
+# Desafio 5:
+# Given: A file containing at most 1000 lines.
+# Return: A file containing all the even-numbered lines from the original file. Assume 1-based numbering of lines.
+# Abrindo o arquivo com a função with open no modo read
+with open('rosalind_ini5.txt', 'r') as arquivo_input:
+# Criando uma variável para todas as linhas do arquivo do input    
+    linhas = arquivo_input.readlines()    
+
+# Criando um novo arquivo para o output, no modo escrita
+ with open('output.txt', 'w') as arquivo_output:
+# Fazendo loop das linhas do índice 1 à linha final, conferindo as linhas pares e escrevendo no arquivo output
+    for x in range(1, len(linhas) + 1):  
+        if x % 2 == 0:
+            arquivo_output.write(linhas[x - 1])  
+# A resposta no prompt de comando
+58
+43
+68
+44
+39
+38
+63
+49
+57
+51
+44
+42
+45
+47
+55
+39
+39
+42
+39
+42
+# A resposta no arquivo txt
+Some things in life are bad, they can really make you mad
+Other things just make you swear and curse
+When you're chewing on life's gristle, don't grumble give a whistle
+This will help things turn out for the best
+Always look on the bright side of life
+Always look on the right side of life
+If life seems jolly rotten, there's something you've forgotten
+And that's to laugh and smile and dance and sing
+When you're feeling in the dumps, don't be silly, chumps
+Just purse your lips and whistle, that's the thing
+So, always look on the bright side of death
+Just before you draw your terminal breath
+Life's a counterfeit and when you look at it
+Life's a laugh and death's the joke, it's true
+You see, it's all a show, keep them laughing as you go
+Just remember the last laugh is on you
+Always look on the bright side of life
+And always look on the right side of life
+Always look on the bright side of life
+And always look on the right side of life
+
+# Desafio 6:
+# Given: A string s of length at most 10000 letters.
+# Return: The number of occurrences of each word in s, where words are separated by spaces. Words are case-sensitive, and the lines in the output can be in any order.
+
+# Criando uma função para contar as palavras da string s 
+def contar_palavras(s):
+
+# Transformando a string em uma lista de palavras usando split para separar as palavras
+    lista = s.split()
+
+    # Criando um dicionário para contar as palavras
+    dicionario = {}
+
+    # Contando as palavras com condicional
+    for palavra in lista:
+        if palavra in dicionario:
+            dicionario[palavra] += 1    # Se a palavra já estiver no dicionário, conta mais uma vez
+        else:
+            dicionario[palavra] = 1 # Se não, adiciona e conta uma vez
+   return dicionario
+    
+    # Testando com o input da Rosalind:
+ s = 'When I find myself in times of trouble Mother Mary comes to me Speaking words of wisdom let it be And in my hour of darkness she is standing right in front of me Speaking words of wisdom let it be Let it be let it be let it be let it be Whisper words of wisdom let it be And when the broken hearted people living in the world agree There will be an answer let it be For though they may be parted there is still a chance that they will see There will be an answer let it be Let it be let it be let it be let it be There will be an answer let it be Let it be let it be let it be let it be Whisper words of wisdom let it be Let it be let it be let it be let it be Whisper words of wisdom let it be And when the night is cloudy there is still a light that shines on me Shine until tomorrow let it be I wake up to the sound of music Mother Mary comes to me Speaking words of wisdom let it be Let it be let it be let it be yeah let it be There will be an answer let it be Let it be let it be let it be yeah let it be Whisper words of wisdom let it be'
+resultado = contar_palavras(s)  
+for palavra, contagem in resultado.items():  
+    print(f"{palavra} {contagem}")
+When 1
+I 2
+find 1
+myself 1
+in 4
+times 1
+of 11
+trouble 1
+Mother 2
+Mary 2
+comes 2
+to 3
+me 4
+Speaking 3
+words 7
+wisdom 7
+let 30
+it 36
+be 41
+And 3
+my 1
+hour 1
+darkness 1
+she 1
+is 4
+standing 1
+right 1
+front 1
+Let 6
+Whisper 4
+when 2
+the 4
+broken 1
+hearted 1
+people 1
+living 1
+world 1
+agree 1
+There 4
+will 5
+an 4
+answer 4
+For 1
+though 1
+they 2
+may 1
+parted 1
+there 2
+still 2
+a 2
+chance 1
+that 2
+see 1
+night 1
+cloudy 1
+light 1
+shines 1
+on 1
+Shine 1
+until 1
+tomorrow 1
+wake 1
+up 1
+sound 1
+music 1
+yeah 2
