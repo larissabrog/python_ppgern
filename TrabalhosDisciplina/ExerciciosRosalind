@@ -48,13 +48,13 @@ def soma(a, b):
 # Fazendo o loop de a até b, com a condicional de ser ímpar e retornando a soma 
     for x in range(a, b + 1):
         if x % 2 != 0:  
-            soma_imp += num
-    return soma
+            soma_imp += x
+    return soma_imp
 
 # Testando com o input da Rosalind
 a = 4953
 b = 9237
-print(def soma(a, b))
+print(soma(a, b))
 15204585
 
 # Desafio 5:
