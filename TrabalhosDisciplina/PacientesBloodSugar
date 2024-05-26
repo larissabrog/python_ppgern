@@ -1,0 +1,36 @@
+# Importando os pacotes
+import pandas as pd
+import numpy as np
+from scipy import stats
+import matplotlib.pyplot as plt
+
+# 1. Isole amostras aleatórias
+sample = df.sample(10, replace=True)['blood sugar']
+
+# 2. Teste a distância da média amostral para a média populacional
+pop_mean = df['blood sugar'].mean()
+x = 0  # Inicialize x antes do loop
+
+# 3. Pare quando a diferença for maior que 30 ou menor que -30 na média de 'blood sugar'
+while -30 <= x <= 30:
+    sample_mean = df.sample(10, replace=True)['blood sugar'].mean()
+    x = sample_mean - pop_mean
+
+print("Encontrada uma diferença maior que 30 ou menor que -30:", x)
+
+# 4. : Encontrar grupos de pacientes que destoem significativamente (p<0.05) da população e plotar as suas características em comparação com a população.
+
+# Craindo arrays para a amostra e a população geral
+amostra = df.sample(10, replace=True)['blood sugar']
+pop = df['blood sugar']
+ # Criando loop para me dar o p pelo teste de Mann-Whitney U
+p =1
+while p >= 0.05:
+    amostra = df.sample(10, replace=True)['blood sugar']
+    _, p = stats.mannwhitneyu(amostra, pop, alternative='two-sided')
+    print(f'Amostra: {amostra}, valor de p: {p}')
+
+# Plotando gráfico
+plt.hist(pop, bins=30, alpha=0.5, color='blue', label='População', density=True)
+plt.hist(amostra, bins=30, alpha=0.5, color='red', label='Amostra', density=True)
+plt.show
