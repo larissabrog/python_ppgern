@@ -1,0 +1,9 @@
+Essa pasta é dedicada aos códigos gerados para o trabalho final da disciplina de Python para biocientistas (PPGERN UFSCar).
+A pasta contém:
+- O arquivo principal (main)
+- Os arquivos com as funções: 
+     - geracao_tabela
+     - rarefacao
+     - tss
+     - coletor2
+     - shannon
